@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Egg Pricing Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Egg Pricing Calculator</h1>
+    <p>
+      Enter your costs and egg production to find out how much to charge for
+      your eggs.
+    </p>
+    <form id="calc-form">
+      <label for="fixed-cost">Total fixed costs (e.g., coop, equipment):</label>
+      <input type="number" id="fixed-cost" required min="0" step="0.01" /><br />
+
+      <label for="lifespan">Expected lifespan of fixed assets (years):</label>
+      <input type="number" id="lifespan" required min="1" step="1" /><br />
+
+      <label for="variable-cost">Monthly variable costs (e.g., feed):</label>
+      <input
+        type="number"
+        id="variable-cost"
+        required
+        min="0"
+        step="0.01"
+      /><br />
+
+      <label for="num-hens">Number of hens:</label>
+      <input type="number" id="num-hens" required min="1" step="1" /><br />
+
+      <label for="eggs-per-hen">Average eggs per hen per month:</label>
+      <input
+        type="number"
+        id="eggs-per-hen"
+        required
+        min="0"
+        step="0.1"
+      /><br />
+
+      <label for="profit-margin">Desired profit margin (%):</label>
+      <input
+        type="number"
+        id="profit-margin"
+        required
+        min="0"
+        max="99"
+        step="1"
+      /><br />
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="results" style="display: none">
+      <h2>Results</h2>
+      <p>Cost per dozen: $<span id="cost-per-dozen"></span></p>
+      <p>
+        Suggested selling price per dozen: $<span id="selling-price"></span>
+      </p>
+      <p>Profit per dozen: $<span id="profit-per-dozen"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
