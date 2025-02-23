@@ -42,6 +42,7 @@ document
     let profitPerDozen = sellingPrice - costPerDozen;
 
     // Display results
+    document.getElementById("results").classList.remove("show");
     document.getElementById("cost-per-dozen").textContent =
       costPerDozen.toFixed(2);
     document.getElementById("selling-price").textContent =
@@ -49,4 +50,5 @@ document
     document.getElementById("profit-per-dozen").textContent =
       profitPerDozen.toFixed(2);
     document.getElementById("results").style.display = "block";
+    document.getElementById("results").classList.add("show");
   });
